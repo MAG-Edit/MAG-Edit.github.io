@@ -324,7 +324,13 @@
         <div class="column is-">
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
-        
+            <p style="text-align: justify">
+             Given that crossattention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features and
+              text embeddings, our key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
+              with the corresponding text prompt. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing 
+              two distinct mask-based CA constraints tailored for the target editing prompt.
+          </p>
+
 
             <td colspan="3">
               <p style="margin-top: 20px; margin-bottom: -12px;">
@@ -334,11 +340,12 @@
               <br>
               <p style="text-align: justify">
                   <strong>High-level overview of the proposed MAG-Edit framework.</strong>
-                The first and second rows represent the reconstruction and editing branches, respectively.
-            
-                In the editing branch, the noise latent feature is optimized through MAG.
-                This optimization process aids in achieving alignment with the target edit prompt ''<span style="color: rgb(0, 176, 240);">blue</span>'' 
-                within the intended edit region.
+                  The first and second rows represent the reconstruction and editing branches, respectively. In the editing branch, the
+  noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt “blue” within the intended edit region M. Figure(b) illustrates MAG. We optimize the zt∗ by maximizing the mask-based CA constraints of target token (e.g.,
+“blue”).  Figure(c ) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
+mask-based CA maps of “blue” token with our MAG and “w/o
+MAG” from different diffusion steps, respectively. 
+                
               </p>
 
             </td>
@@ -481,139 +488,126 @@
    
         
           </div></div></div></section>-->
-          <section class="hero is-small">
+          <section class="hero is-small is-light">
             <div class="hero-body">
-              <div class="container" style="display: flex; justify-content: space-between;">
-                <!-- 左侧的元素 -->
-                <div style="width: 350px;">
-                  <div class="caption-container" style="width: 10px; padding-left: 0px">
-                    <div class="caption">
-     
-                      <h4>Granularity</h4>
+                <!-- 增加容器的宽度 -->
+                <div class="container" style="display: flex; justify-content: space-between; width: 100%;">
+        
+                    <!-- Left Section -->
+                    <div class="left-section" style="flex: 1; padding-right: 10px;">
+                      <div class="container" style="width: 350px;">
+                        <div class="caption-container" style="width: 10px; padding-left: 130px">
+                          <div class="caption">
+           
+                            <h style="font-size: 20px;font-weight: bold;">Granularity</h>
+                          </div>
+                          <br>
+                          
+                          <!-- Add remaining captions here  -->
+                        </div>
+                  <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+                    <div class="item item-video1">
+                       <!-- Add caption element for each video preload="auto"-->
+                      <img style="width: 200px;"  src="./assets/gif_new/granularity/2.gif">
+                    </img>
+          
                     </div>
                     
-                    <!-- Add remaining captions here  -->
-                  </div>
-            <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
-              <div class="item item-video1">
-                 <!-- Add caption element for each video preload="auto"-->
-                <img style="width: 200px;"  src="./assets/gif_new/granularity/2.gif">
-              </img>
-    
-              </div>
-              
-              <div class="item item-video2">       
-                <img style="width: 200px;"  src="./assets/gif_new/granularity/3.gif">
-              
-              </div>
-                </div>
-                <!-- 中间的元素 -->
-                <div style="width: 350px;">
-         
-
-                 <!-- Add caption element for each video preload="auto"-->
-                <img style="width: 200px;"  src="./assets/gif_new/granularity/2.gif">
-              </img>
-    
-              </div>
-              
-
-                </div>
-                <!-- 右侧的元素 -->
-                <div style="width: 400px;">
-                  <div class="caption-container" style="width: 10px; padding-left: 0px">
-                    <div class="caption">
-     
-                      <h4>Granularity</h4>
+                    <div class="item item-video2">       
+                      <img style="width: 200px;"  src="./assets/gif_new/granularity/3.gif">
+                    
+                    </div>
+          
+             
+                  
+                    </div></div>
+                        
+                    </div>
+        
+                    <!-- Center Section -->
+                    <div class="center-section" style="flex: 1; padding: 0 10px;">
+                      <div class="container" style="width: 350px;">
+                        <div class="caption-container" style="width: auto; padding-left: 130px">
+                          <div class="caption">
+           
+                            <h style="font-size: 20px;font-weight: bold;">Iterative</h>
+                          </div>
+                          <br>
+                          
+                          <!-- Add remaining captions here  -->
+                        </div>
+                  <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+                    <div class="item item-video1">
+                       <!-- Add caption element for each video preload="auto"-->
+                      <img style="width: 200px;"  src="./assets/gif_new/iterative/1.gif">
+                    </img>
+          
                     </div>
                     
-                    <!-- Add remaining captions here  -->
-                  </div>
-            <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
-              <div class="item item-video1">
-                 <!-- Add caption element for each video preload="auto"-->
-                <img style="width: 200px;"  src="./assets/gif_new/granularity/2.gif">
-              </img>
-    
-              </div>
-              
-              <div class="item item-video2">       
-                <img style="width: 200px;"  src="./assets/gif_new/granularity/3.gif">
-              
-              </div>
-                </div>
-                </div>
-              </div>
-            </div>
-          </section>
+                    <div class="item item-video2">       
+                      <img style="width: 200px;"  src="./assets/gif_new/iterative/2.gif">
+                    
+                    </div>
+          
+             
+                  
+                    </div></div>
+                        
+                    </div>
         
-          <div class="caption-container" style="width: 1200px; padding-left: 50px">
-            <div class="caption">
-              <h4>Iterative</h4>
-            </div>
-            
-            <!-- Add remaining captions here  -->
-          </div>
-    <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
-      <div class="item item-video1">
-         <!-- Add caption element for each video preload="auto"-->
-        <img style="width: 200px;"  src="./assets/gif_new/iterative/1.gif">
-      </img>
-
-      </div>
-      
-      <div class="item item-video2">       
-        <img style="width: 200px;"  src="./assets/gif_new/iterative/2.gif">
-      
-      </div>
-
-
-    
-      </div>
-      <div class="caption-container" style="width: 1200px; padding-left: 50px">
-        <div class="caption">
-          <h4>Part-level</h4>
-        </div>
+                    <!-- Right Section -->
+                    <div class="right-section" style="flex: 1; padding-left: 10px;">
+                      <div class="container" style="width: 350px;">
+                        <div class="caption-container" style="width: auto; padding-left: 130px">
+                          <div class="caption">
+           
+                            <h style="font-size: 20px;font-weight: bold;">Part-level</h>
+                          </div>
+                          <br>
+                          
+                          <!-- Add remaining captions here  -->
+                        </div>
+                  <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+                    <div class="item item-video1">
+                       <!-- Add caption element for each video preload="auto"-->
+                      <img style="width: 200px;"  src="./assets/gif_new/part-level/1.gif">
+                    </img>
+          
+                    </div>
+                    
+                    <div class="item item-video2">       
+                      <img style="width: 200px;"  src="./assets/gif_new/part-level/2.gif">
+                    
+                    </div>
+                    <div class="item item-video3">       
+                      <img style="width: 200px;"  src="./assets/gif_new/part-level/3.gif">
+                    
+                    </div>
+             
+                  
+                    </div></div>
+                        
+                    </div>
         
-        <!-- Add remaining captions here  -->
-      </div>
-<div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
-  <div class="item item-video1">
-     <!-- Add caption element for each video preload="auto"-->
-    <img style="width: 200px;"  src="./assets/gif_new/part-level/1.gif">
-  </img>
-
-  </div>
-  
-  <div class="item item-video2">       
-    <img style="width: 200px;"  src="./assets/gif_new/part-level/2.gif">
-  
-  </div>
-
-  <div class="item item-video3">       
-    <img style="width: 200px;"  src="./assets/gif_new/part-level/3.gif">
-  
-  </div>
-
-  </div>
-        </div></div>
+                </div>
+            </div>
+        </section>
+        
    
-        
-        </div>
-        </div>
-        
-    </section>          
   <!-- </td> -->
   
  
   
-  <section class="hero is-small is-light">
+  <section class="hero is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column custom-width">
             <h2 class="title is-3">Comparisons with Existing Methods</h2>
       
+          </div></div>
+
+
             <div class="content has-text-justified">      <ul>
             
                 We conducted quantitative comparisons with three types of methods: 
@@ -621,7 +615,14 @@
                 <li>Methods that require retraining</li>
                 <li>Inversion-based methods.</li>
             
-            </ul>
+            </ul>            
+            </div></div></section>
+            
+            <section class="hero is-small is-light">
+              <div class="hero-body">
+                <div class="container is-max-desktop">
+                  <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
               <h3 class="title is-4">Comparison with Training-free Methods</h3>
               <div class="caption-container" style="width: 1200px; padding-left: 50px">
                 <div class="caption">
