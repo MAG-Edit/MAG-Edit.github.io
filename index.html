@@ -25,7 +25,7 @@
 
 
   <title>MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance</title>
-  <link rel="icon" type="image/x-icon" href="static/images/MIPG.jpg">
+  <link rel="icon" type="image/x-icon" href="static/images/cuc.jpg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css">
@@ -153,7 +153,7 @@
 
     <p >&#128209;<strong>TL; DR</strong>: MAG-Edit is the  <span style="color: red;font-weight: bold;">first</span> method specifically designed to address  
       <span style="color: purple;font-weight: bold;">localized</span> image editing 
-      in complex scenarios without training.</p>
+      in    <span style="color: blue;font-weight: bold;">complex scenarios</span> without training.</p>
         </div></div></div></div>
 </section>
 
@@ -338,6 +338,32 @@
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
             <p style="text-align: justify">
+              Images in real-world scenarios usually contain intricate compositions with multiple objects. 
+              However,the trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges.
+           </p>
+ 
+           <p style="text-align: justify">
+            Mask-based inpainting methods directly generate a new object as a foreground element and blend it into
+            the original image,
+            which results in substantial structural changes within the edited areas, causing noticeable discordance with their complex
+            surroundings. On the other hand, although mask-free methods that utilize attention injection mechanisms such as Prompt-to-Prompt (P2P) 
+            and Plug-and-Play (PnP)can preserve the original image’s structure and layout, they struggle to
+            precisely align the local editing region with the intended text in intricate scenarios, largely due to their reliance on the
+            text prompts’ localization capabilities. In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAGEdit), 
+            which designed to enable localized image editing in complex scenarios.
+         </p>
+
+         <p style="text-align: justify">
+          In particular, our approach aims to maximize
+          two aspects of ratios: first, the CA value of the edit token in relation to all token CA values within the masked area, 
+          and second, the CA value of the edit token inside the mask compared to its overall CA values. Subsequently, the gradients of these  
+          constraints guide the update of the noise latentfeature, 
+          thus progressively aligning the editing effect with the desired text prompt and spatial requirements.
+       </p>
+
+
+
+            <p style="text-align: justify">
              Given that crossattention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features and
               text embeddings, our key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
               with the corresponding text prompt. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing 
@@ -396,6 +422,7 @@ MAG” from different diffusion steps, respectively.
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column custom-width">
+            <br>
             <h2 class="title is-3">Applications</h2>
             <div class="content has-text-justified">
               <ul>
@@ -470,7 +497,8 @@ MAG” from different diffusion steps, respectively.
        <img style="width: 300px;"  src="./assets/gif/editingtype3/photos.gif"></img>
 
        <img style="width: 300px;"  src="./assets/gif/editingtype3/remove.gif"></img></div>
-            </div></div></div></div></div></section>
+            </div></div></div></div></div>
+          <br></section>
 
 
             <!--<section class="hero is-small">
@@ -501,6 +529,8 @@ MAG” from different diffusion steps, respectively.
    
         
           </div></div></div></section>-->
+
+          <br>
           <section class="hero is-small is-light">
             <div class="hero-body">
                 <!-- 增加容器的宽度 -->
@@ -509,41 +539,10 @@ MAG” from different diffusion steps, respectively.
                     <!-- Left Section -->
                     <div class="left-section" style="flex: 1; padding-right: 10px;">
                       <div class="container" style="width: 350px;">
-                        <div class="caption-container" style="width: 10px; padding-left: 130px">
+                        <div class="caption-container" style="width: auto; padding-left: 110px">
                           <div class="caption">
            
-                            <h style="font-size: 20px;font-weight: bold;">Granularity</h>
-                          </div>
-                          <br>
-                          
-                          <!-- Add remaining captions here  -->
-                        </div>
-                  <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
-                    <div class="item item-video1">
-                       <!-- Add caption element for each video preload="auto"-->
-                      <img style="width: 200px;"  src="./assets/gif_new/granularity/2.gif">
-                    </img>
-          
-                    </div>
-                    
-                    <div class="item item-video2">       
-                      <img style="width: 200px;"  src="./assets/gif_new/granularity/3.gif">
-                    
-                    </div>
-          
-             
-                  
-                    </div></div>
-                        
-                    </div>
-        
-                    <!-- Center Section -->
-                    <div class="center-section" style="flex: 1; padding: 0 10px;">
-                      <div class="container" style="width: 350px;">
-                        <div class="caption-container" style="width: auto; padding-left: 130px">
-                          <div class="caption">
-           
-                            <h style="font-size: 20px;font-weight: bold;">Iterative</h>
+                            <h style="font-size: 20px;font-weight: bold;">Iterative Editing</h>
                           </div>
                           <br>
                           
@@ -568,13 +567,44 @@ MAG” from different diffusion steps, respectively.
                         
                     </div>
         
+                    <!-- Center Section -->
+                    <div class="center-section" style="flex: 1; padding: 0 10px;">
+ 
+                                    <div class="container" style="width: 350px;">
+                        <div class="caption-container" style="width: auto; padding-left: 80px">
+                          <div class="caption">
+           
+                            <h style="font-size: 20px;font-weight: bold;">Granularity Control</h>
+                          </div>
+                          <br>
+                          
+                          <!-- Add remaining captions here  -->
+                        </div>
+                  <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+                    <div class="item item-video1">
+                       <!-- Add caption element for each video preload="auto"-->
+                      <img style="width: 200px;"  src="./assets/gif_new/granularity/2.gif">
+                    </img>
+          
+                    </div>
+                    
+                    <div class="item item-video2">       
+                      <img style="width: 200px;"  src="./assets/gif_new/granularity/3.gif">
+                    
+                    </div>
+          
+             
+                  
+                    </div></div>
+                    </div>
+        
                     <!-- Right Section -->
                     <div class="right-section" style="flex: 1; padding-left: 10px;">
                       <div class="container" style="width: 350px;">
-                        <div class="caption-container" style="width: auto; padding-left: 130px">
+                        <div class="caption-container" style="width: auto; padding-left: 100px">
                           <div class="caption">
            
-                            <h style="font-size: 20px;font-weight: bold;">Part-level</h>
+                            <h style="font-size: 20px;font-weight: bold;">Part-level Editing</h>
                           </div>
                           <br>
                           
@@ -609,7 +639,7 @@ MAG” from different diffusion steps, respectively.
    
   <!-- </td> -->
   
- 
+ <br>
   
   <section class="hero is-small">
     <div class="hero-body">
@@ -629,6 +659,7 @@ MAG” from different diffusion steps, respectively.
                 <li>Inversion-based methods.</li>
             
             </ul>            
+            <br>
             </div></div></section>
             
             <section class="hero is-small is-light">
@@ -661,7 +692,7 @@ MAG” from different diffusion steps, respectively.
                 
                 <!-- Add remaining captions here  -->
               </div>
-        
+        <br>
         <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
           <div class="item item-video1">
              <!-- Add caption element for each video preload="auto"-->
@@ -777,7 +808,7 @@ MAG” from different diffusion steps, respectively.
       </img>
           </div>
           </div>
-        </div></div></div></div></div></section>
+        </div></div></div></div></section>
         <section class="hero is-small">
           <div class="hero-body">
             <div class="container is-max-desktop">
@@ -785,8 +816,8 @@ MAG” from different diffusion steps, respectively.
                 <div class="column custom-width">
               
                   <div class="content has-text-justified">
-        <div class="content has-text-justified" >        
-          <h3 class="title is-4">Comparison with Training and and Fine-tuning Methods</h3>
+     
+          <h3 class="title is-4" style="text-align: center;">Comparison with Training and and Fine-tuning Methods</h3>
           <div class="caption-container" style="width: 1200px; padding-left: 50px; ">
             <div class="caption">
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source Image</p>
@@ -809,6 +840,7 @@ MAG” from different diffusion steps, respectively.
             
             <!-- Add remaining captions here  -->
           </div>
+          <br>
     <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
       <div class="item item-video1">
          <!-- Add caption element for each video preload="auto"-->
@@ -885,7 +917,7 @@ MAG” from different diffusion steps, respectively.
           
               <div class="content has-text-justified">
     <div class="content has-text-justified" >            
-      <h3 class="title is-4">Comparison with Recent Inversion Methods</h3>
+      <h3 class="title is-4" style="text-align: center;">Comparison with Recent Inversion Methods</h3>
       <div class="caption-container" style="width: 1200px; padding-left: 50px; ">
         <div class="caption">
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source Image</p>
@@ -908,6 +940,7 @@ MAG” from different diffusion steps, respectively.
         
         <!-- Add remaining captions here  -->
       </div>
+      <br>
 <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
   <div class="item item-video1">
      <!-- Add caption element for each video preload="auto"-->
@@ -990,7 +1023,7 @@ MAG” from different diffusion steps, respectively.
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column custom-width">
-          <!-- <h2 class="title is-3"></h2> -->
+          <h2 class="title is-3">Reference</h2>
           <div class="content has-text-justified">
   
             <p>
