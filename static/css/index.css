@@ -133,6 +133,10 @@ body {
   margin-top: 10px;
   width: 1150px;
 }
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
 .results-carousel video {
   margin: 0;
 }
