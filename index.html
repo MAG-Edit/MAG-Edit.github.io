@@ -364,9 +364,9 @@
 
 
             <p style="text-align: justify">
-             Given that crossattention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features and
-              text embeddings, our key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
-              with the corresponding text prompt. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing 
+             Given that cross-attention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features and
+              text embeddings, our <span style="text-decoration: underline;font-weight: bold;">key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
+              with the corresponding text prompt</span>. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing 
               two distinct mask-based CA constraints tailored for the target editing prompt.
           </p>
 
@@ -381,7 +381,7 @@
                   <strong>High-level overview of the proposed MAG-Edit framework.</strong>
                   The first and second rows represent the reconstruction and editing branches, respectively. In the editing branch, the
   noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt “blue” within the intended edit region M. Figure(b) illustrates MAG. We optimize the zt∗ by maximizing the mask-based CA constraints of target token (e.g.,
-“blue”).  Figure(c ) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
+ “ <span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>”).  Figure(c ) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
 mask-based CA maps of “blue” token with our MAG and “w/o
 MAG” from different diffusion steps, respectively. 
                 
@@ -808,7 +808,8 @@ MAG” from different diffusion steps, respectively.
       </img>
           </div>
           </div>
-        </div></div></div></div></section>
+        </div></div></div></div>       <br></section>
+ 
         <section class="hero is-small">
           <div class="hero-body">
             <div class="container is-max-desktop">
@@ -907,7 +908,9 @@ MAG” from different diffusion steps, respectively.
 
     
       </div></div></div></div></div></div></div>
+
     </div>
+    <br>
     </section>
     <section class="hero is-small is-light">
       <div class="hero-body">
@@ -996,7 +999,9 @@ MAG” from different diffusion steps, respectively.
   </div>
 </div>
       </div>
-    </div></div></div></div>
+    </div></div></div>
+  <br>
+  </div>
   </section>
 <!-- End video preload="auto"grid -->
 
