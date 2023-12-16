@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>TokenFlow: Consistent Diffusion Features for Consistent Video Editing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/WIS.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">MAG-Edit: Localized Image Editing in Complex Scenarios via <span style="text-decoration: underline;">M</span>ask-Based
+              <span style="text-decoration: underline;">A</span>ttention-Adjusted <span style="text-decoration: underline;">G</span>uidance</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <p class="author">
+                <span class="author">
+                    <a href="https://zhangjiewu.github.io/">Qi Mao</a><sup>1,2</sup>
+                </span>
+                <span class="author">
+                    <a href="https://geyixiao.com/">Lan Chen</a><sup>1</sup>
+                </span>
+                <span class="author">
+                    <a href="https://ycgu.site/">Yuchao Gu</a><sup>2</sup>
+                </span>
+                <span class="author">
+                    <a href="">Zhen Fang</a><sup>1</sup>
+                </span>
+                <span class="author">
+                    <a href="https://sites.google.com/view/showlab">Mike Zheng Shou</a><sup>2</sup>
+                </span>
+              
+            </p>
+        
+            <p class="affiliations">
+                <span class="author"><sup>1</sup>Communication University of China  </span>
+                    <span class="author"><sup>2</sup><a href="https://sites.google.com/view/showlab">Show Lab</a>,National University of Singapore</span><br/>
+                <!-- <span class="author"><sup>4</sup>School of Computing, National University of Singapore</span> -->
+            </p>
+        
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href='./TokenFlow_Arxiv.pdf' target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="sm/supp.html" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/omerbt/TokenFlow" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              <!-- Hugging Face Demo link with an image icon -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/weizmannscience/tokenflow" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="static/images/hf.png" alt="Hugging Face Demo">
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2307.10373" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<div class="container">
+  <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+              <div class="gif-grid-6">
+                <!-- 第1行 -->
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片1.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/floral.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片3.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/yellowcar.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片4.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/白色小鸟.gif" alt="image">
+                </div>
+    
+                <!-- 第2行 -->
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片5.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/斑马.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片6.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/草莓.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片7.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/车1.gif" alt="image">
+                </div>
+    
+                <!-- 第3行 -->
+                 <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片8.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/粉色小窗帘.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片10.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/绿色小枕头.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片11.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/绿色小沙发.gif" alt="image">
+                </div>
+    
+                <!-- 第4行 -->
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片12.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/牛排.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片13.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/牛仔衣.gif" alt="image">
+                </div>
+                <div class="item image-item">
+                  <p class="gif-caption-small">Reference Image</p>
+                  <img src="./assets/source/图片14.jpg" alt="image">
+                </div>
+                <div class="item item-steve">
+                  <p class="gif-caption-small">"*hair flying in the wind."</p>
+                  <img src="./assets/teaser_gif/热带鱼.gif" alt="image">
+                </div>
+    
+      </div>
+    </section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent diffusion-based image editing approaches have exhibited impressive editing capabilities in images with simple compositions.
+            
+            However, localized editing in complex scenarios has not been well-studied in the literature, despite its growing real-world demands.
+            
+            Existing mask-based inpainting methods fall short of retaining the underlying structure within the edit region.
+            
+            Meanwhile, mask-free attention-based methods often exhibit editing leakage and misalignment in more complex compositions.
+            
+            In this work, we develop <span style="font-weight: bold;">MAG-Edit</span>, a training-free, inference-stage optimization method, which enables localized image editing in complex scenarios.
+            In particular, MAG-Edit optimizes the noise latent feature in diffusion models by maximizing two mask-based cross-attention constraints of the edit token, which in turn gradually enhances the local alignment with the desired prompt.
+            Extensive quantitative and qualitative experiments demonstrate the effectiveness of our method in achieving both text alignment and structure preservation for localized editing within complex scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+        
+
+            <td colspan="3">
+              <p style="margin-top: 20px; margin-bottom: -12px;">
+                <div style="text-align: center">
+                  <img src="./assets/framework.png" alt="" width="1080px" style="max-width: 800px; height: auto;" />
+              </div>
+              <br>
+              <p style="text-align: justify">
+                  <strong>High-level overview of the proposed MAG-Edit framework.</strong>
+                The first and second rows represent the reconstruction and editing branches, respectively.
+            
+                In the editing branch, the noise latent feature is optimized through MAG.
+                This optimization process aids in achieving alignment with the target edit prompt ''<span style="color: rgb(0, 176, 240);">blue</span>'' 
+                within the intended edit region.
+              </p>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+      
+      </div>
+      </div>
+  </section>
+<!--End paper poster -->
+
+<!-- Video grid -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">MAG-Edit Results</h2>
+          <div class="video-wrapper" style="width: 99%">
+            <img src="./assets/gif_new/scenarios/1.gif" > </img>
+            <img src="./assets/gif_new/scenarios/2.gif" > </img>
+        
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-">
+            <h2 class="title is-3">Applications</h2>
+            <div class="content has-text-justified">
+              <section class="hero is-small is-light">
+                <div class="hero-body">
+                  <div class="container is-max-desktop">
+                    <div class="columns is-centered has-text-centered">
+                      <div class="column custom-width">
+                        <h2 class="title is-3">Comparisons</h2>
+                        <div class="content has-text-justified">
+                          <div class="caption-container" style="width: 1200px; padding-left: 50px">
+                            <div class="caption">
+                              <p>Source Image</p>
+                            </div>
+                            <div class="caption">
+                              <p>Ours</p>
+                            </div>
+                            <div class="caption">
+                              <p>Blended-LD</p>
+                            </div>
+                     
+                            <div class="caption">
+                              <p>DiffEdit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            </div>
+                     
+                            <div class="caption">
+                              <p>P2P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            </div>
+                            <div class="caption">
+                              <p>PnP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            </div>
+                            
+                            <!-- Add remaining captions here  -->
+                          </div>
+                    <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+                      <div class="item item-video1">
+                         <!-- Add caption element for each video preload="auto"-->
+                        <img style="width: 200px;"  src="./assets/compare/1/source.jpg">
+                      </img>
+                      <img style="width: 200px;"  src="./assets/compare/1/图片1.jpg">
+                    </img>
+                        
+                    <img style="width: 200px;"  src="./assets/compare/1/图片2.jpg">
+                  </img>
+                        
+                  <img style="width: 200px;"  src="./assets/compare/1/图片3.jpg">
+                </img>
+                <img style="width: 200px;"  src="./assets/compare/1/图片4.jpg">
+              </img>
+                        
+                    <img style="width: 200px;"  src="./assets/compare/1/图片6.jpg">
+                  </img>
+                       
+                      </div>
+  
+   
+        
+        </div>
+        </div>
+    </section>          
+  <!-- </td> -->
+  
+ 
+  
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <h2 class="title is-3">Comparisons</h2>
+            <div class="content has-text-justified">
+              <div class="caption-container" style="width: 1200px; padding-left: 50px">
+                <div class="caption">
+                  <p>Source Image</p>
+                </div>
+                <div class="caption">
+                  <p>Ours</p>
+                </div>
+                <div class="caption">
+                  <p>Blended-LD</p>
+                </div>
+         
+                <div class="caption">
+                  <p>DiffEdit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+         
+                <div class="caption">
+                  <p>P2P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+                <div class="caption">
+                  <p>PnP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                </div>
+                
+                <!-- Add remaining captions here  -->
+              </div>
+        <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+          <div class="item item-video1">
+             <!-- Add caption element for each video preload="auto"-->
+            <img style="width: 200px;"  src="./assets/compare/1/source.jpg">
+          </img>
+          <img style="width: 200px;"  src="./assets/compare/1/图片1.jpg">
+        </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/1/图片2.jpg">
+      </img>
+            
+      <img style="width: 200px;"  src="./assets/compare/1/图片3.jpg">
+    </img>
+    <img style="width: 200px;"  src="./assets/compare/1/图片4.jpg">
+  </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/1/图片6.jpg">
+      </img>
+           
+          </div>
+          
+          <div class="item item-video2">
+            
+            <img style="width: 200px;"  src="./assets/compare/2/source.jpg">
+          </img>
+          <img style="width: 200px;"  src="./assets/compare/2/图片1.jpg">
+        </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/2/图片2.jpg">
+      </img>
+            
+      <img style="width: 200px;"  src="./assets/compare/2/图片3.jpg">
+    </img>
+    <img style="width: 200px;"  src="./assets/compare/2/图片4.jpg">
+  </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/2/图片6.jpg">
+      </img>
+          </div>
+
+
+          <div class="item item-video3">
+            
+            <img style="width: 200px;"  src="./assets/compare/3/source.jpg">
+          </img>
+          <img style="width: 200px;"  src="./assets/compare/3/1.jpg">
+        </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/3/2.jpg">
+      </img>
+            
+      <img style="width: 200px;"  src="./assets/compare/3/3.jpg">
+    </img>
+    <img style="width: 200px;"  src="./assets/compare/3/4.jpg">
+  </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/3/6.jpg">
+      </img>
+          </div>
+          <div class="item item-video4">
+            
+            <img style="width: 200px;"  src="./assets/compare/4/source.jpg">
+          </img>
+          <img style="width: 200px;"  src="./assets/compare/4/1.jpg">
+        </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/4/2.jpg">
+      </img>
+            
+      <img style="width: 200px;"  src="./assets/compare/4/3.jpg">
+    </img>
+    <img style="width: 200px;"  src="./assets/compare/4/4.jpg">
+  </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/4/6.jpg">
+      </img>
+          </div>
+
+          <div class="item item-video5">
+            
+            <img style="width: 200px;"  src="./assets/compare/5/source.jpg">
+          </img>
+          <img style="width: 200px;"  src="./assets/compare/5/1.jpg">
+        </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/5/2.jpg">
+      </img>
+            
+      <img style="width: 200px;"  src="./assets/compare/5/3.jpg">
+    </img>
+    <img style="width: 200px;"  src="./assets/compare/5/4.jpg">
+  </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/5/6.jpg">
+      </img>
+          </div>
+          <div class="item item-video6">
+            
+            <img style="width: 200px;"  src="./assets/compare/6/source.jpg">
+          </img>
+          <img style="width: 200px;"  src="./assets/compare/6/1.jpg">
+        </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/6/2.jpg">
+      </img>
+            
+      <img style="width: 200px;"  src="./assets/compare/6/3.jpg">
+    </img>
+    <img style="width: 200px;"  src="./assets/compare/6/4.jpg">
+  </img>
+            
+        <img style="width: 200px;"  src="./assets/compare/6/6.jpg">
+      </img>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End video preload="auto"grid -->
+
+<!-- video preload="auto"carousel -->
+
+<!-- End video preload="auto"carousel -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{tokenflow2023,
+        title = {TokenFlow: Consistent Diffusion Features for Consistent Video Editing},
+        author = {Geyer, Michal and Bar-Tal, Omer and Bagon, Shai and Dekel, Tali},
+        journal={arXiv preprint arxiv:2307.10373},
+        year={2023}
+        }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <!-- <h2 class="title is-3"></h2> -->
+          <div class="content has-text-justified">
+  
+  
+  <p>
+    <a name="ref-ebsynth" id="ref-ebsynth"></a>
+    <!-- [6] Gwanghyun Kim, Taesung Kwon, and Jong Chul Ye. Diffusionclip: Text-guided diffusion models for robust image manipulation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. -->
+  </p>
+  </div>
+        </div>
+      </div>
+    </div>  
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+      
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+      
+          wrapper.style.height = `${height}px`;
+      
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+      
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      }); 
+      $(document).ready(function() {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+    
+        $('.carousel').on('click', function() {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+    
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+  </body>
+  </html>

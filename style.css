@@ -1,0 +1,287 @@
+/* CSS Document */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+
+body {
+	font-family: Google Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	background-color: #fff;
+	line-height: 1.5em;
+}
+
+p a, table.affiliations a, table.menu a {
+	border-bottom: solid 1px #ddd;
+	color: inherit;
+	text-decoration: none;
+}
+
+.isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+  }
+
+table.menu {
+	font-size: 13pt;
+	font-weight: 500;
+}
+
+strong, b {
+    font-weight: 500;
+}
+
+p.author {
+    font-size: 16pt;
+	font-weight: 300;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 1080px;
+    padding: 0em 3em 0 3em;
+	line-height: 1.5em;
+}
+
+.author {
+	margin: 0pt 8pt;
+}
+
+p.affiliations {
+    font-size: 14pt;
+	font-weight: 200;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 1080px;
+    padding: 0.5em 3em 0.5em 3em;
+	line-height: 1.5em;
+}
+
+p.menu {
+    font-size: 14pt;
+	font-weight: 500;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 1080px;
+    padding: 0.5em 3em 0.5em 3em;
+	line-height: 1.5em;
+}
+
+sup {
+    font-size: 0.7em;
+    position: relative;
+    top: 0em;
+    vertical-align: super;
+    font-size: smaller;
+}
+
+
+.venue {
+	font-size: 120%;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+
+
+table.affiliations {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    width: 80%;
+    max-width: 1080px;
+}
+
+table.affiliations td {
+    padding-top: .5em;
+    /*width: 10%;*/
+    font-size: 11pt;
+}
+
+table#video {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.caption1 {
+	/* font-style: italic; */
+	font-size: 100%;
+}
+
+.caption-hl-color {
+	color: #4682B4;
+}
+
+.label {
+	line-height: 1.2;
+	text-align: center;
+}
+
+.highlight {
+	color: #4682B4;
+}
+
+
+.section1{
+	font-size: 150%;
+	font-weight: 500;
+}
+.subsection {
+    font-size: 125%; /* 比主标题小一些 */
+    font-weight: 400; /* 略微减轻字体的粗细 */
+    color: #666; /* 副标题通常使用更淡的颜色 */
+
+    margin-bottom: 1em; /* 添加一些底部间距 */
+}
+
+.bibtex {
+	font-family: Google Sans, Courier, monospace;
+	white-space: pre;
+}
+
+.date {
+	font-size: 80%;
+}
+
+table.data td {
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+
+.image-item img, .gif-item img {
+	width: 100%; /* 让图像填满容器 */
+	height: auto; /* 保持图像的原始宽高比 */
+  }
+  
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+
+.carousel-control-prev {
+ margin-left: -50px;
+ height: 300px;
+ }
+ .carousel-control-next {
+ margin-right: -50px;
+ height: 300px;
+ }
+
+ .carousel-control-prev2 {
+	margin-left: -50px;
+	height: 300px;
+	}
+.carousel-control-next2 {
+margin-right: -10px;
+height: 100px;
+}
+ .carousel-item {
+ /* height: 234px; */
+ overflow: hidden;
+ /* width: 100%; */
+ text-align: center;
+ }
+ .carousel-item img {
+ /* width: 100%; */
+ }
+ .carousel-inner .item img {
+ margin:auto;
+ }
+ .carousel-control-next,.carousel-control-prev{
+ opacity:1
+ }
+ .carousel-control-next2,.carousel-control-prev2{
+	opacity:1
+	}
+ .carousel-control-next:focus,.carousel-control-next:hover,.carousel-control-prev:focus,.carousel-control-prev:hover{
+ opacity:1
+ }
+ .carousel-control-next2:focus,.carousel-control-next2:hover,.carousel-control-prev2:focus,.carousel-control-prev2:hover{
+	opacity:1
+	}
+
+
+
+
+ .teaser-carousel {
+    width: 670px;
+    margin: auto;
+    height: 400px;
+ }
+
+ .caption1 {
+    font-family: Caveat;
+	font-size: 150%;
+    color: gray;
+	width: auto;
+	display: inline-block;
+	padding: 11px 15px 11px 15px;
+	border-radius: 10px;
+ }
+
+ .caption:hover {
+    cursor: pointer;
+    color: black;
+ }
+
+ .caption-active {
+    color: black;
+	background-color: #F2D2BD;
+ }
+
+ #videoCarousel{
+     margin-top:5px;
+ }
+
+
+.teaser-img {
+    width: 300px !important;
+}
+.result-img {
+    width: 600px !important;
+}
+
+.gif-grid-6 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 四列布局 */
+	gap: 2px;
+	width: 100%; /* 确保容器宽度充足 */
+	margin-left: auto; /* 左边距自动 */
+	margin-right: auto; /* 右边距自动 */
+	margin-top: -60px; /* 右边距自动 */
+  }
+  
+  
+  .gif-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr; /* 四列布局 */
+	gap: 10px;
+	width: 100%; /* 确保容器宽度充足 */
+	margin-left: auto; /* 左边距自动 */
+	margin-right: auto; /* 右边距自动 */
+  }
+  .full-width-text {
+	grid-column: 1 / -1; /* 从第一列开始，延伸到最后一列 */
+	text-align: center; /* 文字居中 */
+	color: #0099ff; /* 设置文本颜色 */
+	font-size: 20px; /* 设置字体大小 */
+	/* 其他样式 */
+  }
+  .gif-caption-small {
+	text-align: center;
+	color: #0099ff; /* 设置文本颜色 */
+	font-size: 11px;
+  }

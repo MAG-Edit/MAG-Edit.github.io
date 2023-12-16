@@ -1,0 +1,686 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://6.869.csail.mit.edu/fa19/schedule.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/caveat');
+</style>
+<script src="./assets/teaser-data.js"></script>
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MAG-Edit</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance.&#39;">
+    <link rel="icon" href="./assets/showlab.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            @import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css";
+          </style>
+</head>
+
+<body>
+    <p class="title">MAG-Edit: Localized Image Editing in Complex Scenarios via <span style="text-decoration: underline;">M</span>ask-Based
+        <span style="text-decoration: underline;">A</span>ttention-Adjusted <span style="text-decoration: underline;">G</span>uidance</p>
+    <div style="text-align: center; font-size: 20pt; margin-bottom: 15px">
+       <!-- <span>CVPR 2024</span>-->
+    </div>
+    <p class="author">
+        <span class="author">
+            <a href="https://zhangjiewu.github.io/">Qi Mao</a><sup>1,2</sup>
+        </span>
+        <span class="author">
+            <a href="https://geyixiao.com/">Lan Chen</a><sup>1</sup>
+        </span>
+        <span class="author">
+            <a href="https://ycgu.site/">Yuchao Gu</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a href="">Zhen Fang</a><sup>1</sup>
+        </span>
+        <span class="author">
+            <a href="https://sites.google.com/view/showlab">Mike Zheng Shou</a><sup>2</sup>
+        </span>
+      
+    </p>
+
+    <p class="affiliations">
+        <span class="author"><sup>1</sup>Communication University of China</span>
+            <span class="author"><sup>2</sup><a href="https://sites.google.com/view/showlab">Show Lab</a>,National University of Singapore</span><br/>
+        <!-- <span class="author"><sup>4</sup>School of Computing, National University of Singapore</span> -->
+    </p>
+
+    <p class="menu">
+        <a style="color: steelblue" href="https://arxiv.org/abs/2212.11565">[Paper (arXiv)]</a> 
+        <a style="color: steelblue" href="https://github.com/HelenMao/MAG-Edit" >[Code (Github)]</a>
+        <a style="color: steelblue" href="https://colab.research.google.com/github/showlab/Tune-A-Video/blob/main/notebooks/Tune-A-Video.ipynb">[Demo (Colab)]</a>
+        <a style="color: steelblue" href="https://huggingface.co/spaces/Tune-A-Video-library/Tune-A-Video-inference">[Demo (Hugging Face)]</a> 
+    </p>
+
+    &nbsp;
+
+
+    <div class="container">
+        <section class="section">
+            <div class="container is-max-desktop">
+              <div class="columns is-centered">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <div class="gif-grid-6">
+                      <!-- 第1行 -->
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片1.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/floral.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片3.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/yellowcar.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片4.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/白色小鸟.gif" alt="image">
+                      </div>
+          
+                      <!-- 第2行 -->
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片5.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/斑马.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片6.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/草莓.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片7.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/车1.gif" alt="image">
+                      </div>
+          
+                      <!-- 第3行 -->
+                       <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片8.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/粉色小窗帘.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片10.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/绿色小枕头.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片11.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/绿色小沙发.gif" alt="image">
+                      </div>
+          
+                      <!-- 第4行 -->
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片12.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/牛排.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片13.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/牛仔衣.gif" alt="image">
+                      </div>
+                      <div class="item image-item">
+                        <p class="gif-caption-small">Reference Image</p>
+                        <img src="./assets/source/图片14.jpg" alt="image">
+                      </div>
+                      <div class="item item-steve">
+                        <p class="gif-caption-small">"*hair flying in the wind."</p>
+                        <img src="./assets/teaser_gif/热带鱼.gif" alt="image">
+                      </div>
+          
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container is-max-desktop">
+              <!-- Abstract. -->
+       
+        <p style="text-align: center; margin-top: -400px;"><span class="section1"><b>Abstract</b></span></p>
+        <p style="text-align: justify; justify-content: center; max-width: 800px; margin:auto"> 
+            Recent diffusion-based image editing approaches have exhibited impressive editing capabilities in images with simple compositions.
+            
+            However, localized editing in complex scenarios has not been well-studied in the literature, despite its growing real-world demands.
+            
+            Existing mask-based inpainting methods fall short of retaining the underlying structure within the edit region.
+            
+            Meanwhile, mask-free attention-based methods often exhibit editing leakage and misalignment in more complex compositions.
+            
+            In this work, we develop <span style="font-weight: bold;">MAG-Edit</span>, a training-free, inference-stage optimization method, which enables localized image editing in complex scenarios.
+            In particular, MAG-Edit optimizes the noise latent feature in diffusion models by maximizing two mask-based cross-attention constraints of the edit token, which in turn gradually enhances the local alignment with the desired prompt.
+            Extensive quantitative and qualitative experiments demonstrate the effectiveness of our method in achieving both text alignment and structure preservation for localized editing within complex scenarios.
+        <p class="section1">&nbsp;</p>
+
+   
+        <p class="section1"><b>Method</b></p>
+        <div style="text-align: center">
+            <img src="./assets/framework.png" alt="" width="1080px" style="max-width: 800px; height: auto;" />
+        </div>
+        <p style="text-align: justify">
+            <strong>High-level overview of the proposed MAG-Edit framework.</strong>
+            
+            The first and second rows represent the reconstruction and editing branches, respectively.
+            
+            In the editing branch, the noise latent feature is optimized through MAG.
+            This optimization process aids in achieving alignment with the target edit prompt ''<span style="color: rgb(0, 176, 240);">blue</span>'' 
+            within the intended edit region.
+        </p>
+        <p class="section1">&nbsp;</p>
+
+        <p class="section1"><b>Results</b></p>
+        <!-- <div style="text-align: center">
+            <img src="./sm/assets/results.jpg" alt="" width="850" style="margin: auto" />
+        </div> -->
+
+        <div class="container">
+            <table width="1080px" border="0" align="center" style="margin-top: 80px; margin-bottom: -200px;">
+                <tbody>
+                    <tr>
+                        <div id="imageCarousel3" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                <!-- Rabbit -->
+                                <div class="carousel-item active">
+                                    <div>
+                                        <img class="result-img" src="./assets/gif_new/scenarios/1.gif" />
+    
+                                    </div>
+                                    <br />
+                 
+                                </div>
+                                
+                                <!-- Basketball -->
+                                <div class="carousel-item">
+                                    <div>
+                                        <img class="result-img" src="./assets/gif_new/scenarios/2.gif" />
+    
+                                    </div>
+                                    <br />
+          
+                                </div>    
+                            </div>
+                            <a class="carousel-control-prev" href="#imageCarousel3" role="button" data-slide="prev">
+                                <div class="slider-navigation-previous">
+                                    <svg viewBox="0 0 50 80" xml:space="preserve">
+                                        <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                            stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                        </polyline>
+                                    </svg>
+                                </div>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#imageCarousel3" role="button" data-slide="next">
+                                <div class="slider-navigation-next">
+                                    <svg viewBox="0 0 50 80" xml:space="preserve">
+                                        <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                            stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                        </polyline>
+                                    </svg>
+                                </div>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </tr>
+    
+                </tbody>
+            </table>
+            &nbsp;
+            <p class="section1">&nbsp;</p>
+        
+
+        <p class="section1"><b>Applications</b></p>
+        <p class="subsection">Different Editing Types</p>
+        
+        <div class="container">
+            <table width="1080px" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <div id="imageCarousel2" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                <!-- Rabbit -->
+                                <div class="carousel-item active">
+                                    <div>
+                                        <img class="teaser-img" src="./assets/data/editing_type/editing_type/1/source.png" />
+                                        <span style="font-size: 150%;">→</span>
+                                        <img id="rabbit-result" class="teaser-img" src="./assets/gif/editingtype1/1/redwine.gif" />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <div onclick="toggle_prompt('redwine', ['butterfly', 'remove1','bowl'], 'rabbit-result')" class="caption caption-active" id="redwine">
+                                            Attribute Manipulation</div>
+                                        <br />
+                                        <div onclick="toggle_prompt('bowl', ['butterfly', 'remove1','redwine'], 'rabbit-result')" class="caption" id="bowl">
+                                            Object Replacement</div>
+                                        <br />
+                                        <div onclick="toggle_prompt('butterfly', ['redwine', 'remove1','bowl'], 'rabbit-result')" class="caption" id="butterfly">
+                                            Object Addition</div>
+                                        <br />   
+                                        <div onclick="toggle_prompt('remove1', ['butterfly', 'redwine','bowl'], 'rabbit-result')" class="caption" id="remove1">
+                                            Object Removal</div>
+                                 
+                                    
+                                    </div>
+                                </div>
+                                
+                                <!-- Basketball -->
+                                <div class="carousel-item">
+                                    <div>
+                                        <img class="teaser-img" src="./assets/data/editing_type/editing_type/2/source.jpg" />
+                                        <span style="font-size: 150%;">→</span>
+                                        <img id="basketball-result" class="teaser-img" src="./assets/gif/editingtype2/window.gif" />
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <div onclick="toggle_prompt('window', ['lamp', 'remove2','lantern'], 'basketball-result')" class="caption caption-active" id="window">
+                                            Attribute Manipulation</div>
+                                        <br />
+                                        <div onclick="toggle_prompt('lantern', ['lamp', 'remove2','window'], 'basketball-result')" class="caption" id="lantern">
+                                            Object Replacement</div>
+                                        <br />
+                                        <div onclick="toggle_prompt('lamp', ['window', 'remove2','lantern'], 'basketball-result')" class="caption" id="lamp">
+                                            Object Addition</div>
+                                        <br />   
+                                        <div onclick="toggle_prompt('remove2', ['lamp', 'window','lantern'], 'basketball-result')" class="caption" id="remove2">
+                                            Object Removal</div>
+                                 
+                                    
+                                    </div>
+                                </div>
+    
+                                        <!-- Basketball -->
+                                        <div class="carousel-item">
+                                            <div>
+                                                <img class="teaser-img" src="./assets/data/editing_type/editing_type/3/source.jpg" />
+                                                <span style="font-size: 150%;">→</span>
+                                                <img id="picnic-result" class="teaser-img" src="./assets/gif/editingtype3/bread.gif" />
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <div onclick="toggle_prompt('bread', ['bulb', 'remove3','photos'], 'picnic-result')" class="caption caption-active" id="bread">
+                                                    Attribute Manipulation</div>
+                                                <br />
+                                                <div onclick="toggle_prompt('bulb', ['bread', 'remove3','photos'], 'picnic-result')" class="caption" id="bulb">
+                                                    Object Replacement</div>
+                                                <br />
+                                                <div onclick="toggle_prompt('photos', ['bulb', 'remove3','bread'], 'picnic-result')" class="caption" id="photos">
+                                                    Object Addition</div>
+                                                <br />   
+                                                <div onclick="toggle_prompt('remove3', ['bulb', 'bread','photos'], 'picnic-result')" class="caption" id="remove3">
+                                                    Object Removal</div>
+                                         
+                                            
+                                            </div>
+                                        </div>
+    
+                                <!-- Skiing -->
+        
+    
+                            </div>
+                            <a class="carousel-control-prev" href="#imageCarousel2" role="button" data-slide="prev">
+                                <div class="slider-navigation-previous">
+                                    <svg viewBox="0 0 50 80" xml:space="preserve">
+                                        <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                            stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                        </polyline>
+                                    </svg>
+                                </div>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#imageCarousel2" role="button" data-slide="next">
+                                <div class="slider-navigation-next">
+                                    <svg viewBox="0 0 50 80" xml:space="preserve">
+                                        <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                            stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                        </polyline>
+                                    </svg>
+                                </div>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </tr>
+                    <tr> <br /> </tr>
+                    <tr align="center"></tr>
+                </tbody>
+            </table>
+            &nbsp;
+
+            <p class="section1">&nbsp;</p>
+            <br>
+            <br>
+            <br>
+            <p class="subsection">Granularity</p>
+
+
+            <div class="container">
+                <table width="1080px" border="0" align="center" style="margin-top: 80px; margin-bottom: -200px;">
+                    <tbody>
+                        <tr>
+                            <div id="imageCarousel4" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <!-- Rabbit -->
+                                    <div class="carousel-item active">
+                                        <div>
+                                            <img class="teaser-img" src="./assets/gif_new/granularity/3.gif" />
+        
+                                        </div>
+                                        <br />
+                     
+                                    </div>
+                                    
+                                    <!-- Basketball -->
+                                    <div class="carousel-item">
+                                        <div>
+                                            <img class="teaser-img" src="./assets/gif_new/granularity/2.gif" />
+        
+                                        </div>
+                                        <br />
+              
+                                    </div>    
+                                </div>
+                                <a class="carousel-control-prev" href="#imageCarousel4" role="button" data-slide="prev">
+                                    <div class="slider-navigation-previous">
+                                        <svg viewBox="0 0 50 80" xml:space="preserve">
+                                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                                stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                            </polyline>
+                                        </svg>
+                                    </div>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#imageCarousel4" role="button" data-slide="next">
+                                    <div class="slider-navigation-next">
+                                        <svg viewBox="0 0 50 80" xml:space="preserve">
+                                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                                stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                            </polyline>
+                                        </svg>
+                                    </div>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </tr>
+        
+                    </tbody>
+                </table>
+                &nbsp;
+                <p class="section1">&nbsp;</p>
+                <p class="subsection">Iterative</p>
+
+                <div class="container">
+                    <table width="1080px" border="0" align="center" style="margin-top: 80px; margin-bottom: -200px;">
+                        <tbody>
+                            <tr>
+                                <div id="imageCarousel5" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <!-- Rabbit -->
+                                        <div class="carousel-item active">
+                                            <div>
+                                                <img class="teaser-img" src="./assets/gif_new/iterative/1.gif" />
+            
+                                            </div>
+                                            <br />
+                         
+                                        </div>
+                                        
+                                        <!-- Basketball -->
+                                        <div class="carousel-item">
+                                            <div>
+                                                <img class="teaser-img" src="./assets/gif_new/iterative/2.gif" />
+            
+                                            </div>
+                                            <br />
+                  
+                                        </div>    
+                                    </div>
+                                    <a class="carousel-control-prev" href="#imageCarousel5" role="button" data-slide="prev">
+                                        <div class="slider-navigation-previous">
+                                            <svg viewBox="0 0 50 80" xml:space="preserve">
+                                                <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                                    stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#imageCarousel5" role="button" data-slide="next">
+                                        <div class="slider-navigation-next">
+                                            <svg viewBox="0 0 50 80" xml:space="preserve">
+                                                <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                                    stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+                    &nbsp;
+                <p class="section1">&nbsp;</p>
+                <p class="section1">&nbsp;</p>
+                <p class="subsection">Part-level</p>
+                <p><b></b></p>
+                <div class="container">
+                    <table width="1080px" border="0" align="center" style="margin-top: 80px; margin-bottom: -200px;">
+                        <tbody>
+                            <tr>
+                                <div id="imageCarousel6" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <!-- Rabbit -->
+                                        <div class="carousel-item active">
+                                            <div>
+                                                <img class="teaser-img" src="./assets/gif_new/part-level/1.gif" />
+            
+                                            </div>
+                                            <br />
+                            
+                                        </div>
+                                        
+                                        <!-- Basketball -->
+                                        <div class="carousel-item">
+                                            <div>
+                                                <img class="teaser-img" src="./assets/gif_new/part-level/2.gif" />
+            
+                                            </div>
+                                            <br />
+                    
+                                        </div>    
+                                        <div class="carousel-item">
+                                            <div>
+                                                <img class="teaser-img" src="./assets/gif_new/part-level/3.gif" />
+            
+                                            </div>
+                                            <br />
+                    
+                                        </div> 
+                                    </div>
+                                    <a class="carousel-control-prev" href="#imageCarousel6" role="button" data-slide="prev">
+                                        <div class="slider-navigation-previous">
+                                            <svg viewBox="0 0 50 80" xml:space="preserve">
+                                                <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                                    stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#imageCarousel6" role="button" data-slide="next">
+                                        <div class="slider-navigation-next">
+                                            <svg viewBox="0 0 50 80" xml:space="preserve">
+                                                <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                                    stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                                </polyline>
+                                            </svg>
+                                        </div>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+                    &nbsp;
+                    <p class="section1">&nbsp;</p>
+        <!-- <p class="section" id="paper"><b>Paper</b></p>
+        <table width="940" border="0">
+            <tbody>
+                <tr>
+                    <td height="100"><a href="https://arxiv.org/abs/2211.12572" target="_blank" rel="noopener noreferrer"><img
+                                src="./sm/assets/paper_cover.jpeg" alt="" width="140" height="167"></a></td>
+                    <td width="750">
+                        <p><b>Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation</b><br>
+                            Narek Tumanyan <sup>*</sup>, Michal Geyer <sup>*</sup>, Shai Bagon, Tali Dekel.<br />
+                            (* indicates equal contribution) <br>
+                            [<a href="https://arxiv.org/abs/2211.12572" target="_blank"
+                                rel="noopener noreferrer">paper</a>]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="section">&nbsp;</p> -->
+
+        <!-- <p class="section" id="sm"><b>Supplementary Material</b></p>
+        <table width="587" height="136" border="0">
+            <tbody>
+                <tr>
+                    <td width="180"><img src="./assets/sm/assets/sm.png" alt="" height="150"></td>
+                    <td align="left">
+                        <p>[<a href="./assets/sm/index.html" target="_blank">supplementary page</a>]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="section">&nbsp;</p> -->
+        <p class="section1">&nbsp;</p>
+        <p class="section1" id="bibtex"><b>Bibtex</b></p>
+        <table border="0">
+            <tbody>
+                <pre style=" display: block;
+                    background: #eee;
+                    white-space: pre;
+                    -webkit-overflow-scrolling: touch;
+                    max-width: 100%;
+                    min-width: 100px;
+                    border-radius: 20px;
+                    ">
+
+    @inproceedings{wu2023tune,
+        title={Tune-a-video: One-shot tuning of image diffusion models for text-to-video generation},
+        author={Wu, Jay Zhangjie and Ge, Yixiao and Wang, Xintao and Lei, Stan Weixian and Gu, Yuchao and Shi, Yufei and Hsu, Wynne and Shan, Ying and Qie, Xiaohu and Shou, Mike Zheng},
+        booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+        pages={7623--7633},
+        year={2023}
+    }       
+			    </pre>
+            </tbody>
+        </table>
+        
+    </div>
+</section>
+    </div>
+
+    <footer class="footer">
+        <p style="text-align: center;">
+            This page was adapted from <a href="https://github.com/tuneavideo/tuneavideo.github.io">this</a> source code.
+        </p>
+    </footer>
+
+
+</body>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WLX2Z5QLG8');
+ </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function () {
+
+        if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
+            $(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
+        }
+
+        $(window).on("scroll", function() {
+            localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
+        });
+
+      });
+ </script>
+
+ <script>
+    function prompt_on(prompt_element) {
+        prompt_element.classList.add("caption-active");
+    }
+
+    function prompt_off(prompt_element) {
+        prompt_element.classList.remove("caption-active");
+    }
+
+    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+        let active_prompt = document.getElementById(active_prompt_id);
+        prompt_on(active_prompt);
+        for (let i = 0; i < inactive_prompt_ids.length; i++) {
+            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+            prompt_off(inactive_prompt);
+        }
+
+        let result = document.getElementById(result_id);
+        result.src = file_paths[active_prompt_id];
+    }
+ </script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
