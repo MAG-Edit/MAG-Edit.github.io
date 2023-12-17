@@ -338,23 +338,24 @@
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
     
- 
+           <h3> Motivations </h3>  
            <p style="text-align: justify">
-            The trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges. Mask-based inpainting methods  lead 
-            to substantial structural changes within the edited areas,
-             causing noticeable discordance with their complex surroundings. On the other hand, mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) struggle to
-            precisely align the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.
-             In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAG-Edit), which designed to enable localized image editing in complex scenarios.
+            The trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges. 
+            <ul>
+              <li> Mask-based inpainting methods lead to substantial structural changes within the edited areas, causing noticeable discordance with their complex surroundings.</li>
+              <li> Mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) struggle to precisely align the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.</li>
+            </ul>
+            In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAG-Edit), which designed to enable localized image editing in complex scenarios.
          </p>
          <div style="text-align: center">
-          <img src="./assets/compare_method/compare.png" alt="" width="1080px" style="max-width: 1100px; height: auto;" />
+          <img src="./assets/compare_method/compare.png" alt="" width="80%" style="max-width: 1100px; height: auto;" />
       </div>
 
-
-
-
-            <p style="text-align: justify">
-  
+      <hr>
+      
+          <h3> How doese it work? </h3>
+          <p style="text-align: justify">
+              
               Given that cross-attention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features 
               and text embeddings, our <span style="text-decoration: underline;font-weight: bold;">key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
               with the corresponding text prompt</span>. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing two 
@@ -367,14 +368,13 @@
             <td colspan="3">
      
                 <div style="text-align: center">
-                  <img src="./assets/framework.png" alt="" width="1080px" style="max-width: 1100px; height: auto;" />
+                  <img src="./assets/framework.png" alt="" width="90%" style="max-width: 1100px; height: auto;" />
               </div>
               <br>
               <p style="text-align: justify">
                   <strong>High-level overview of the proposed MAG-Edit framework.</strong>
-                  The first and second rows in Figure(a ) represent the reconstruction and editing branches, respectively. In the editing branch, the
-  noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt “blue” within the intended edit region M. Figure(b) illustrates MAG. We optimize the zt∗ by maximizing the mask-based CA constraints of target token (e.g.,
- “ <span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>”).  Figure(c ) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
+                  The first and second rows in Figure(a) represent the reconstruction and editing branches, respectively. In the editing branch, the noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt “blue” within the intended edit region M. Figure(b) illustrates MAG. We optimize the zt∗ by maximizing the mask-based CA constraints of target token (e.g.,
+ “ <span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>”).  Figure(c) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
 mask-based CA maps of “blue” token with our MAG and “w/o
 MAG” from different diffusion steps, respectively. 
                 
