@@ -337,49 +337,42 @@
         <div class="column is-">
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified">
-            <p style="text-align: justify">
-              Images in real-world scenarios usually contain intricate compositions with multiple objects. 
-              However,the trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges.
-           </p>
+    
  
            <p style="text-align: justify">
-            Mask-based inpainting methods directly generate a new object as a foreground element and blend it into
-            the original image,
-            which results in substantial structural changes within the edited areas, causing noticeable discordance with their complex
-            surroundings. On the other hand, although mask-free methods that utilize attention injection mechanisms such as Prompt-to-Prompt (P2P) 
-            and Plug-and-Play (PnP)can preserve the original image’s structure and layout, they struggle to
-            precisely align the local editing region with the intended text in intricate scenarios, largely due to their reliance on the
-            text prompts’ localization capabilities. In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAGEdit), 
-            which designed to enable localized image editing in complex scenarios.
+            The trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges. Mask-based inpainting methods  lead 
+            to substantial structural changes within the edited areas,
+             causing noticeable discordance with their complex surroundings. On the other hand, mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) struggle to
+            precisely align the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.
+             In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAG-Edit), which designed to enable localized image editing in complex scenarios.
          </p>
+         <div style="text-align: center">
+          <img src="./assets/compare_method/compare.png" alt="" width="1080px" style="max-width: 1100px; height: auto;" />
+      </div>
 
-         <p style="text-align: justify">
-          In particular, our approach aims to maximize
-          two aspects of ratios: first, the CA value of the edit token in relation to all token CA values within the masked area, 
-          and second, the CA value of the edit token inside the mask compared to its overall CA values. Subsequently, the gradients of these  
-          constraints guide the update of the noise latentfeature, 
-          thus progressively aligning the editing effect with the desired text prompt and spatial requirements.
-       </p>
 
 
 
             <p style="text-align: justify">
-             Given that cross-attention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features and
-              text embeddings, our <span style="text-decoration: underline;font-weight: bold;">key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
-              with the corresponding text prompt</span>. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing 
-              two distinct mask-based CA constraints tailored for the target editing prompt.
+  
+              Given that cross-attention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features 
+              and text embeddings, our <span style="text-decoration: underline;font-weight: bold;">key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
+              with the corresponding text prompt</span>. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing two 
+              distinct mask-based CA constraints tailored for the target editing prompt. The constraints aims to maximize two aspects of ratios: first, the CA value 
+              of the edit token in relation to all token 
+              CA values within the masked area, and second, the CA value of the edit token inside the mask compared to its overall CA values.
           </p>
 
 
             <td colspan="3">
-              <p style="margin-top: 20px; margin-bottom: -12px;">
+     
                 <div style="text-align: center">
                   <img src="./assets/framework.png" alt="" width="1080px" style="max-width: 1100px; height: auto;" />
               </div>
               <br>
               <p style="text-align: justify">
                   <strong>High-level overview of the proposed MAG-Edit framework.</strong>
-                  The first and second rows represent the reconstruction and editing branches, respectively. In the editing branch, the
+                  The first and second rows in Figure(a ) represent the reconstruction and editing branches, respectively. In the editing branch, the
   noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt “blue” within the intended edit region M. Figure(b) illustrates MAG. We optimize the zt∗ by maximizing the mask-based CA constraints of target token (e.g.,
  “ <span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>”).  Figure(c ) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
 mask-based CA maps of “blue” token with our MAG and “w/o
