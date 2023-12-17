@@ -380,11 +380,14 @@
               <br>
               <p style="text-align: justify">
                   <strong>High-level overview of the proposed MAG-Edit framework.</strong>
-                  The first and second rows in Figure(a) represent the reconstruction and editing branches, respectively. In the editing branch, the noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt “blue” within the intended edit region M. Figure(b) illustrates MAG. We optimize the zt∗ by maximizing the mask-based CA constraints of target token (e.g.,
- “ <span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>”).  Figure(c) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt∗ with MAG, .The top row and the bottom row illustrate the average
-mask-based CA maps of “blue” token with our MAG and “w/o
-MAG” from different diffusion steps, respectively. 
-                
+                  <ul>
+                  <li> The first and second rows in Figure(a) represent the reconstruction and editing branches, respectively. In the editing branch, the noise latent feature is optimized through MAG. This optimization process aids in achieving alignment with the target edit prompt "<span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>" within the intended edit region M. </li>
+                  <li> Figure(b) illustrates MAG. We optimize the zt* by maximizing the mask-based CA constraints of target token (e.g.,
+ "<span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>"). </li>
+                  <li> Figure(c) shows there is a noticeable enhancement in the CA values within the edit regions M when applying optimization of zt* with MAG.The top row and the bottom row illustrate the average
+mask-based CA maps of "<span style="font-weight: bold;color:rgb(0, 176, 240);">blue</span>" token with our MAG and "w/o
+MAG" from different diffusion steps, respectively. </li>
+                </ul>
               </p>
 
             </td>
