@@ -342,8 +342,8 @@
            <p style="text-align: justify">
             The trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges. 
             <ul>
-              <li> Mask-based inpainting methods lead to substantial structural changes within the edited areas, causing noticeable discordance with their complex surroundings.</li>
-              <li> Mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) struggle to precisely align the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.</li>
+              <li> Mask-based inpainting methods such as Blended Latent Diffusion (Blended LD) and DiffEdit lead to substantial <b>structural changes</b> within the edited areas, causing noticeable discordance with their complex surroundings.</li>
+              <li> Mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) <b>struggle to precisely align</b> the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.</li>
             </ul>
             In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAG-Edit), which designed to enable localized image editing in complex scenarios.
          </p>
@@ -359,16 +359,19 @@
               Given that cross-attention (CA) maps in pre-trained T2I diffusion models effectively capture the correlation between input features 
               and text embeddings, our <span style="text-decoration: underline;font-weight: bold;">key insight is that adjusting the noise latent feature to attain higher CA values significantly enhances its alignment 
               with the corresponding text prompt</span>. As a result, we propose locally optimizing the noise latent feature during the inference stage by maximizing two 
-              distinct mask-based CA constraints tailored for the target editing prompt. The constraints aims to maximize two aspects of ratios: first, the CA value 
-              of the edit token in relation to all token 
-              CA values within the masked area, and second, the CA value of the edit token inside the mask compared to its overall CA values.
+              distinct mask-based CA constraints tailored for the target editing prompt. The constraints aims to maximize two aspects of ratios: 
+              <ol>
+                <li> The CA value of the edit token in relation to all token CA values within the masked area.</li>
+                <li> The CA value of the edit token inside the mask compared to its overall CA values.</li>
+              </ol>
+          
           </p>
 
 
             <td colspan="3">
      
                 <div style="text-align: center">
-                  <img src="./assets/framework.png" alt="" width="90%" style="max-width: 1100px; height: auto;" />
+                  <img src="./assets/framework.png" alt="" width="1000px" style="max-width: 1100px; height: auto;" />
               </div>
               <br>
               <p style="text-align: justify">
