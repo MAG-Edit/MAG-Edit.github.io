@@ -24,8 +24,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance</title>
-  <link rel="icon" type="image/x-icon" href="static/images/cuc.jpg">
+  <title>
+    MAG-Edit: Localized Image Editing in Complex Scenarios via Mask-Based Attention-Adjusted Guidance</title>
+  <link rel="icon" type="image/x-icon" href="static/images/magedit.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css">
@@ -52,8 +53,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">MAG-Edit: Localized Image Editing in Complex Scenarios via <span style="text-decoration: underline;">M</span>ask-Based
-              <span style="text-decoration: underline;">A</span>ttention-Adjusted <span style="text-decoration: underline;">G</span>uidance</h1>
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/magedit.png" alt="图标描述" style="width: 100px; height: 100px; vertical-align: middle; margin-right: 0px; position: relative; top: -10px;">
+              MAG-Edit: Localized Image Editing in Complex Scenarios via <span style="text-decoration: underline;">M</span>ask-Based
+              <span style="text-decoration: underline;">A</span>ttention-Adjusted <span style="text-decoration: underline;">G</span>uidance
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <p class="author">
@@ -342,8 +346,8 @@
            <p style="text-align: justify">
             The trade-off between fidelity and editability in localized image editing within complex scenarios presents significant challenges. 
             <ul>
-              <li> Mask-based inpainting methods such as Blended Latent Diffusion (Blended LD) and DiffEdit lead to substantial <b>structural changes</b> within the edited areas, causing noticeable discordance with their complex surroundings.</li>
-              <li> Mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) <b>struggle to precisely align</b> the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.</li>
+              <li> Mask-based inpainting methods such as Blended Latent Diffusion (Blended LD) and DiffEdit lead to substantial <span style="font-weight: bold;">structural changes</span> within the edited areas, causing noticeable discordance with their complex surroundings.</li>
+              <li> Mask-free methods such as Prompt-to-Prompt (P2P) and Plug-and-Play (PnP) <span style="font-weight: bold;">struggle to precisely align</span> the local editing region with the intended text in intricate scenarios, largely due to their reliance on the text prompts localization capabilities.</li>
             </ul>
             In this work, we introduce a novel editing scheme named Mask-Based Attention-Adjusted Guidance (MAG-Edit), which designed to enable localized image editing in complex scenarios.
          </p>
@@ -429,12 +433,9 @@ MAG” from different diffusion steps, respectively.
                 <li>Localized editing at  part-level</li>
               </ul>
              
-              <div class="caption-container" style="width: 1200px;text-align: center;">
+              <div class="caption-container" style="width: 1200px;">
                 <div class="caption" >
-                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;
-                    Different Editing Types</h3>
+                  <h3> Different Editing Types</h3>
                 </div>
                 <!-- Add remaining captions here  -->
               </div>
@@ -654,6 +655,7 @@ MAG” from different diffusion steps, respectively.
                 <div class="container is-max-desktop">
                   <div class="columns is-centered has-text-centered">
                     <div class="column custom-width">
+                      <div class="content has-text-justified">
               <h3 class="title is-4">Comparison with Training-free Methods</h3>
               <div class="caption-container" style="width: 1200px; padding-left: 50px">
                 <div class="caption">
@@ -681,7 +683,9 @@ MAG” from different diffusion steps, respectively.
               </div>
         <br>
         <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
+          
           <div class="item item-video1">
+            <p>Simplified prompt: Yellow chair</p>
              <!-- Add caption element for each video preload="auto"-->
             <img style="width: 200px;"  src="./assets/compare/1/source.jpg">
           </img>
@@ -702,7 +706,7 @@ MAG” from different diffusion steps, respectively.
           </div>
           
           <div class="item item-video2">
-            
+            <p>Simplified prompt: Green sofa</p>
             <img style="width: 200px;"  src="./assets/compare/2/source.jpg">
           </img>
           <img style="width: 200px;"  src="./assets/compare/2/1.png">
@@ -722,7 +726,7 @@ MAG” from different diffusion steps, respectively.
 
 
           <div class="item item-video3">
-            
+            <p>Simplified prompt: Denim vest</p>
             <img style="width: 200px;"  src="./assets/compare/3/source.jpg">
           </img>
           <img style="width: 200px;"  src="./assets/compare/3/1.png">
@@ -740,7 +744,7 @@ MAG” from different diffusion steps, respectively.
       </img>
           </div>
           <div class="item item-video4">
-            
+            <p>Simplified prompt: Plaid shirt</p>
             <img style="width: 200px;"  src="./assets/compare/4/source.jpg">
           </img>
           <img style="width: 200px;"  src="./assets/compare/4/1.png">
@@ -759,7 +763,7 @@ MAG” from different diffusion steps, respectively.
           </div>
 
           <div class="item item-video5">
-            
+            <p>Simplified prompt: Slices of steak</p>
             <img style="width: 200px;"  src="./assets/compare/5/source.jpg">
           </img>
           <img style="width: 200px;"  src="./assets/compare/5/1.png">
@@ -777,7 +781,7 @@ MAG” from different diffusion steps, respectively.
       </img>
           </div>
           <div class="item item-video6">
-            
+            <p>Simplified prompt: Tropical fish</p>
             <img style="width: 200px;"  src="./assets/compare/6/source.jpg">
           </img>
           <img style="width: 200px;"  src="./assets/compare/6/1.png">
@@ -795,7 +799,7 @@ MAG” from different diffusion steps, respectively.
       </img>
           </div>
           </div>
-        </div></div></div></div>       <br></section>
+        </div></div></div></div> </div>       <br></section>
  
         <section class="hero is-small">
           <div class="hero-body">
@@ -805,7 +809,7 @@ MAG” from different diffusion steps, respectively.
               
                   <div class="content has-text-justified">
      
-          <h3 class="title is-4" style="text-align: center;">Comparison with Training and and Fine-tuning Methods</h3>
+          <h3 class="title is-4">Comparison with Training and and Fine-tuning Methods</h3>
           <div class="caption-container" style="width: 1200px; padding-left: 50px; ">
             <div class="caption">
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source Image</p>
@@ -832,6 +836,7 @@ MAG” from different diffusion steps, respectively.
     <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
       <div class="item item-video1">
          <!-- Add caption element for each video preload="auto"-->
+         <p>Simplified prompt: Yellow car</p>
         <img style="width: 200px;"  src="./assets/compare2/2/source.png">
       </img>
       <img style="width: 200px;"  src="./assets/compare2/2/ours.png">
@@ -848,7 +853,7 @@ MAG” from different diffusion steps, respectively.
       </div>
       
       <div class="item item-video2">
-        
+        <p>Simplified prompt: Zebra-dense-pattern sofa</p>
         <img style="width: 200px;"  src="./assets/compare2/3/source.png">
       </img>
       <img style="width: 200px;"  src="./assets/compare2/3/ours.png">
@@ -865,7 +870,7 @@ MAG” from different diffusion steps, respectively.
 
 
       <div class="item item-video3">
-        
+        <p>Simplified prompt: Strawberry</p>
         <img style="width: 200px;"  src="./assets/compare2/5/source.png">
       </img>
       <img style="width: 200px;"  src="./assets/compare2/5/ours.png">
@@ -879,7 +884,7 @@ MAG” from different diffusion steps, respectively.
 <img style="width: 200px;"  src="./assets/compare2/5/sine.png">
       </div>
       <div class="item item-video4">
-        
+        <p>Simplified prompt: Plaid sofa</p>
         <img style="width: 200px;"  src="./assets/compare2/7/source.png">
       </img>
       <img style="width: 200px;"  src="./assets/compare2/7/ours.png">
@@ -907,7 +912,7 @@ MAG” from different diffusion steps, respectively.
           
               <div class="content has-text-justified">
     <div class="content has-text-justified" >            
-      <h3 class="title is-4" style="text-align: center;">Comparison with Recent Inversion Methods</h3>
+      <h3 class="title is-4">Comparison with Recent Inversion Methods</h3>
       <div class="caption-container" style="width: 1200px; padding-left: 50px; ">
         <div class="caption">
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Source Image</p>
@@ -934,6 +939,7 @@ MAG” from different diffusion steps, respectively.
 <div id="results-carousel" class="carousel results-carousel" align="center" data-interval="false">
   <div class="item item-video1">
      <!-- Add caption element for each video preload="auto"-->
+     <p>Simplified prompt: Jeep</p>
     <img style="width: 200px;"  src="./assets/compare3/1/source.png">
   </img>
   <img style="width: 200px;"  src="./assets/compare3/1/ours.png">
@@ -950,7 +956,7 @@ MAG” from different diffusion steps, respectively.
   </div>
   
   <div class="item item-video2">
-    
+    <p>Simplified prompt: Floral sofa</p>
     <img style="width: 200px;"  src="./assets/compare3/2/source.png">
   </img>
   <img style="width: 200px;"  src="./assets/compare3/2/ours.png">
@@ -967,7 +973,7 @@ MAG” from different diffusion steps, respectively.
 
 
   <div class="item item-video3">
-    
+    <p>Simplified prompt: Yellow shirt</p>
     <img style="width: 200px;"  src="./assets/compare3/3/source.png">
   </img>
   <img style="width: 200px;"  src="./assets/compare3/3/ours.png">
